@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E28320DAB429040681A2F54 /* Pods_KnxApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED879DD8333B084E677E3EE8 /* Pods_KnxApp.framework */; };
 		BFCA60011EB7AB070077E716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA60001EB7AB070077E716 /* AppDelegate.swift */; };
 		BFCA60031EB7AB070077E716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA60021EB7AB070077E716 /* ViewController.swift */; };
 		BFCA60061EB7AB070077E716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA60041EB7AB070077E716 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAB5D295F92829BDD37D6ED4 /* Pods-KnxApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnxApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KnxApp/Pods-KnxApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BFCA5FFD1EB7AB070077E716 /* KnxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCA60001EB7AB070077E716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFCA60021EB7AB070077E716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		BFCA60071EB7AB070077E716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFCA600A1EB7AB070077E716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFCA600C1EB7AB070077E716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED879DD8333B084E677E3EE8 /* Pods_KnxApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KnxApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F64992A92681A487586D3DFF /* Pods-KnxApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnxApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-KnxApp/Pods-KnxApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E28320DAB429040681A2F54 /* Pods_KnxApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80565ABD139204801225F9BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED879DD8333B084E677E3EE8 /* Pods_KnxApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFCA5FF41EB7AB070077E716 = {
 			isa = PBXGroup;
 			children = (
 				BFCA5FFF1EB7AB070077E716 /* KnxApp */,
 				BFCA5FFE1EB7AB070077E716 /* Products */,
+				D5A9DDEF2A6AE144B028C1D9 /* Pods */,
+				80565ABD139204801225F9BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = KnxApp;
 			sourceTree = "<group>";
 		};
+		D5A9DDEF2A6AE144B028C1D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAB5D295F92829BDD37D6ED4 /* Pods-KnxApp.debug.xcconfig */,
+				F64992A92681A487586D3DFF /* Pods-KnxApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFCA600F1EB7AB070077E716 /* Build configuration list for PBXNativeTarget "KnxApp" */;
 			buildPhases = (
+				304E88536518D6BFB5B3F165 /* [CP] Check Pods Manifest.lock */,
 				BFCA5FF91EB7AB070077E716 /* Sources */,
 				BFCA5FFA1EB7AB070077E716 /* Frameworks */,
 				BFCA5FFB1EB7AB070077E716 /* Resources */,
+				6F354425D044E92029ECE592 /* [CP] Embed Pods Frameworks */,
+				B85B13F70D23C7E08CF1D20E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		304E88536518D6BFB5B3F165 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F354425D044E92029ECE592 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KnxApp/Pods-KnxApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B85B13F70D23C7E08CF1D20E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KnxApp/Pods-KnxApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFCA5FF91EB7AB070077E716 /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		BFCA60101EB7AB070077E716 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAB5D295F92829BDD37D6ED4 /* Pods-KnxApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KnxApp/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		BFCA60111EB7AB070077E716 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64992A92681A487586D3DFF /* Pods-KnxApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KnxApp/Info.plist;
