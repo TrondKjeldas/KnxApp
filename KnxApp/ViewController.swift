@@ -19,6 +19,9 @@ class ViewController: UIViewController, KnxOnOffResponseHandlerDelegate {
 
         // Set the address to the server running EIBD
         KnxRouterInterface.routerIp = "gax58"
+        KnxRouterInterface.multicastGroup = "224.0.23.12"
+        KnxRouterInterface.connectionType = .udpMulticast
+
 
         // Add the DPT for your address to the address registry
         KnxGroupAddressRegistry.addTypeForGroupAddress(address: KnxGroupAddress(fromString:"1/0/16"),
@@ -46,7 +49,7 @@ class ViewController: UIViewController, KnxOnOffResponseHandlerDelegate {
 
     // Response method, gets called when the group address is written,
     // typically used to sync up UI with system state
-    func onOffResponse(on:Bool) {
-        print("State of lightbulb: \(on)")
+    func onOffResponse(sender: KnxGroupAddress, state:Bool) {
+        print("State of lightbulb: \(state)")
     }
 }
